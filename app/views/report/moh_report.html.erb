@@ -18,40 +18,47 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-   
-    color: white;
+    border-bottom: thin solid black;
+   	color: white;   
+	}
+.sticky {
+  position: fixed;
+  top: 0;
+ 
 }
+
+
 </style>
 
-<div style="margin-left: 8.3%; margin-top: 40px; width: 83.5%;">
-	
-	<div class="col-sm-2">
-		<div class="panel">
-			<div class="panel-heading" style="background-color: #37474F; color: white; font-weight: bold;">
-				Searching Cretaria
-			</div>
-			<div class="panel-body">
-				<form class="form">
-					<div class="form-group">
+	<div class="col-sm-10" style="margin-top: 30px;">
+		
+		<div class="col-sm-12">
+			<div class="panel">
+				<div class="panel-heading" style="color: black; font-weight: bold; border-bottom: thin solid black;">
+					Searching Cretaria
+				</div>
+				<div class="panel-body">
+					<span>
 						<label>Level</label>
-						<select class="form-control" name="level" id="level">
+						<select name="level" id="level">
 							<option value="national" onclick="document.getElementById('lab_facility').style.display ='none';">National Level</option>
-							<option value="facility" onclick="document.getElementById('lab_facility').style.display ='block';">Facility Level</option>
+							<option value="facility" onclick="document.getElementById('lab_facility').style.display ='inline';">Facility Level</option>
 						</select>
-					</div>
-					<div class="form-group" style="display: none;" id="lab_facility">
+					
+					</span>
+					<span id="lab_facility" style="margin-left: 10px; display: none;">
 						<label>Lab</label>
-						<select class="form-control" name="facility" id="facility">
+						<select name="facility" id="facility">
 							<option value="Kamuzu Central Hospital">Kamuzu Central Hospital Lab</option>
 							<option value="Queen Elizabeth Central Hospital">Queens Elizabeth Hospital Lab</option>
 							<option value="Thyolo District Hospital">Thyolo District Hospital Lab</option>
 							<option value="Zomba Central Hospital">Zomba Central Hospital Lab</option>
 							<option value="Mzuzu Central Hospital">Mzuzu Central Hospital Lab</option>
 						</select>
-					</div>
-					<div class="form-group"">
+					</span>
+					<span style="margin-left: 10px;">
 						<label>Lab Department</label>
-						<select class="form-control" name="department" id="department">
+						<select name="department" id="department">
 							<option value="all">All Departments</option>
 							<option value="Microbiology">Microbiology</option>
 							<option value="Haematology">Haematology</option>
@@ -60,59 +67,62 @@
 							<option value="Biochemistry">Biochemistry</option>
 							<option value="Parasitology">Parasitology</option>
 						</select>
-					</div>
-					<div class="form-group">
+					</span>
+					<span style="margin-left: 10px;">
 						<label>Year</label>
-						<select class="form-control" name="year" id="year">
+						<select name="year" id="year">
 							<option value="2018">2018</option>
 							<option value="2017">2017</option>
 							<option value="2016">2016</option>
 						</select>
-					</div>
-					<div class="form-group"">
+					</span>
+					<span style="margin-left: 10px;">
 						<label>Quarter</label>
-						<select class="form-control" name="quarter" id="quarter">
+						<select name="quarter" id="quarter">
 							<option value="q1">Q1</option>
 							<option value="q2">Q2</option>
 							<option value="q3">Q3</option>
 							<option value="q4">Q4</option>
 						</select>
-					</div>
-					
-					<input  class="btn btn-primary" type="button" value="Search" onclick="loadData();">
+					</span>
+					<span style="margin-left: 10px;">
+						<input  class="btn btn-primary" type="button" value="Search" onclick="loadData();">
+					</span>
 
-				</form>
-			</div>
-			<div class="panel-footer" style="display: none;" id="foot">
-				<input type="button" value="Export to Csv" class="btn btn-success" onclick="create_csv();">
-			</div>
-		</div>
-	</div>
+					<span style="margin-left: 10px;">
+						<input type="button" value="Export" class="btn btn-success" onclick="create_csv();">
+					</span>
 
-	<div class="col-sm-10">
-		
-		<div style="margin-top: 1px; height: 650px; overflow: auto">
-			<table class="table" id="table">
-				<thead style="background-color: #37474F; color: white; font-weight: bold;">
-					<tr id="t_header">
-						<th>Indicator</th>
+				</div>
 			
-					</tr>
-				</thead>
-				<tbody style="background-color: white; " id="rows">
-						<tr id="disp_row">
-							<td colspan="5">
-								<span style="color: red;"> search to view data </span>
-							</td>
-							
-						</tr>						
-				</tbody>
-			</table>
+			</div>
 		</div>
+
+		<div class="col-sm-12">
+			
+			<div style="margin-top: 1px; height: 650px;" id="table_data">
+				<table class="table" id="table">
+					<thead style="background-color: #37474F ;color: white; font-weight: bold;">
+						<tr id="t_header">
+							<th>Indicator</th>
+				
+						</tr>
+					</thead>
+					<tbody style="background-color: white; " id="rows">
+							<tr id="disp_row">
+								<td colspan="5">
+									<span style="color: red;"> search to view data </span>
+								</td>
+								
+							</tr>						
+					</tbody>
+				</table>
+			</div>
+		</div>
+
 	</div>
 
 </div>
-
 
 
 <script type="text/javascript">
@@ -446,6 +456,29 @@
           {window.open('data:text/csv;charset=UTF-8,' + encodeURIComponent(final_csv));
           }
  	}
+
+
+
+
+
+ 	window.onscroll = function() {myFunction()};
+
+	// Get the header
+	var header = document.getElementById("table_data");
+
+	// Get the offset position of the navbar
+	var sticky = header.offsetTop;
+
+	// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+	function myFunction() {
+	  if (window.pageYOffset > 155.51665954589844) {
+	    header.classList.add("sticky");
+
+	  } else {
+	    header.classList.remove("sticky");
+	  }
+	} 
+
 
 
 

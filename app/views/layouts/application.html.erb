@@ -6,38 +6,84 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
    <%= javascript_include_tag "highcharts" %>
   <%= csrf_meta_tags %>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		#main_nav {position: fixed; top: 0; width: 100%; z-index: 1;}
+	</style>
 </head>
-<body style="background-color: #eeeeee">
+	<body style="background-color: #eeeeee">
 
-	
-	<div style="background-color: #37474F;height: 130px;">
 		
-		
-		<h2 style="margin-top: 0px; padding-left:  8.5%; padding-top: 2%; color: white;">
+		<div class="navbar" style="background-color: #37474F;height: 130px;" id="main_nav">
 			
-			NLIMS 
-			<span style="color: lightgrey;">
-				Dashboard 				
-			</span>
-		</h2>
-		
-		<div class="col-sm-offset-1 col-sm-10" style="padding-top: 0.5%; padding-left: 0.5%;padding-bottom: 0.5%">
-			<span>
-				<input id="f_btn" type="button" value="Home" class="btn" style="background-color: #37474F; color: orange" onclick="window.location='/home'">
+			<div class="col-sm-5" style="margin-top: 10px;">
+				<h2 style="margin-top: 0px; padding-left:  0%; padding-top: 5%; color: white;">
+					
+					NLIMS 
+					<span style="color: lightgrey;">
+						Dashboard 				
+					</span>
+				</h2>
+				
+				<div style="padding-top: 0.5%; padding-left: -1%;padding-bottom: 0.5%">
+					<span>
+						<input id="f_btn" type="button" value="Home" class="btn" style="background-color: #37474F; color: orange" onclick="window.location='/home'">
 
-			</span>
-			<span>
-				<input id="f_btn" type="button" value="MoH Diagnostic Report" 
-					style="background-color: #37474F; color: orange" class="btn" onclick="window.location='/moh_report'">
+					</span>
+					<span>
+						<input id="f_btn" type="button" value="MoH Diagnostic Report" 
+							style="background-color: #37474F; color: orange" class="btn" onclick="window.location='/moh_report'">
 
-			</span>
+					</span>
 
-			
+					<span>
+						<input id="f_btn" type="button" value="Log Out" 
+							style="background-color: #37474F; color: red" class="btn" onclick="window.location='/moh_report'">
+
+					</span>
+
+					
+				</div>
+
+			</div>
+			<div class="col-sm-offset-2 col-sm-5" >
+				<span style="float: right;">
+					
+					<%= image_tag("new1.png") %>
+				</span>
+			</div>
+
 		</div>
+		
 
-	</div>
-	
 
-	<%= yield %>
-</body>
+		<div class="row" style="margin-top: 132.5px;">
+				<div class="col-sm-2" style="margin-top: 0px;">
+					
+						<div class="panel" style="position: fixed;">
+							
+							<div class="panel-body" style="height: 800px;">
+								<p style="font-weight: bold; color: black; font-size: 150%; text-align: center;"> 
+									Welcome 
+								</p>
+								
+								<p style="text-align: center; color: blue"> 
+									Gift Maloloddjbdbjbdb
+								</p>
+								
+								<p style="margin-top: 90px; text-align: center; border-top: thin solid black;
+									padding-top: 15px; border-bottom: thin solid black; padding-bottom: 15px;"> 
+									Baobab Health Trust
+									@ 2018 
+								</p>
+							</div>
+							
+						</div>
+					
+				</div>
+
+			
+		<%= yield %>
+	</body>
 </html>
