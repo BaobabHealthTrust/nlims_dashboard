@@ -1,123 +1,718 @@
-<div style="margin-left: 8.3%; margin-top: 95px; width: 83.5%;">
-		
-	<div class="col-sm-6">
-		<div class="panel panel-default" style="margin-top: 1%;">
-				<div class="panel-heading" style="background-color: #37474F;">Sites Syncing Status</div>
-				<div class="panel-body" style="height: 320px;">
-					<table class="table">
-						<thead>
-							<tr style="color: green">
-								<th>Site Name</th>
-								<th>Status</th>
-								<th>Last Seen</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									Kamuzu Central Hospital
-								</td>
-								<td>
-									Online
-								</td>
-								<td>
-									Now
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Kamuzu Central Hospital
-								</td>
-								<td>
-									Online
-								</td>
-								<td>
-									Now
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Kamuzu Central Hospital
-								</td>
-								<td>
-									Online
-								</td>
-								<td>
-									Now
-								</td>
-							</tr>
-							<tr>
-								<td>
-									Kamuzu Central Hospital
-								</td>
-								<td>
-									Online
-								</td>
-								<td>
-									Now
-								</td>
-							</tr>
-						</tbody>
-					</table>
+
+<div style="margin-left: 8.3%; margin-top: 40px; width: 83.5%;">
+	<div class="row" style="margin-bottom: 30px;">	
+		<div class="col-sm-6">
+			<div class="panel" style="margin-top: 1%;">
+					<div class="panel-heading " style="color: white; background-color: #37474F; font-weight: bold;">Data Syncing Status for Sites</div>
+					<div class="panel-body" >
+						<div  class="col-sm-5" id="main" style="height: 460px;"> </div>
+						<div class="col-sm-6">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Site</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Kamuzu Central Hospital</td>
+										<td>Online</td>
+									</tr>
+									<tr>
+										<td>Kamuzu Central Hospital</td>
+										<td>Online</td>
+									</tr>
+									<tr>
+										<td>Kamuzu Central Hospital</td>
+										<td>Online</td>
+									</tr>
+									<tr>
+										<td>Queens Elizabeth Central Hospital</td>
+										<td>Online</td>
+									</tr>
+									<tr>
+										<td>Kawale Health Facility</td>
+										<td>Online</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div>
+				<div class="col-sm-6">
+					<div class="panel " style="margin-top: 3.5%;">
+						<div class="panel-heading " style="color: white; background-color: #37474F; text-align: center; font-weight: bold;" id="p_header_1"></div>
+						<div class="panel-body" style="height: 120px;">
+							<p style="text-align: center; padding-top: 20px; color: #8c9eff; 
+								font-weight: bold; font-size: 240%;" id="v_header_1">
+								
+							</p>
+						</div>
+						<div class="panel-footer" >
+							<p style="text-align: center; font-weight: bold;" >For the Year: <span id="yr_1"></span></p>
+						</div>
+					</div>
 				</div>
-				<div class="panel-footer">
-					<p>	<span> Total Sites: 5</span>
-						<span> Sites Online: 3</span>
-						<span> Sites Off-line: 2</span>
-					</p>
+				<div class="col-sm-6" id="d_1">
+					<div class="panel" style="margin-top: 3.5%;">
+						<div class="panel-heading " style="color: white; background-color: #37474F; text-align: center; 
+								background-color: #37474F !important; font-weight: bold;" id="p_header_2"></div>
+
+						<div class="panel-body" style="height: 120px; display: block; width: 100%;" >
+							<p style="text-align: center; padding-top: 20px; color: #8c9eff; 
+								font-weight: bold; font-size: 240%;" id="v_header_2">
+							</p>
+						</div>
+						<div class="panel-footer" >
+							<p style="text-align: center; font-weight: bold;">For the Year: <span id="yr_2"></span></p>
+						</div>
+					</div>
 				</div>
+			</div>
+
+			<div style="">
+				<div class="col-sm-12" >
+					<div class="panel panel-default" style="margin-top: 3.5%;">
+					
+						<div class="panel-body" style="height: 270px;" id="container" >
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="col-sm-6">
-		<div>
-			<div class="col-sm-6">
-				<div class="panel panel-default" style="margin-top: 3.5%;">
-					<div class="panel-heading " style="text-align: center;">Total Orders</div>
-					<div class="panel-body" style="height: 80px;">
-						<p style="text-align: center;">150000</p>
-					</div>
-					<div class="panel-footer">
-						<p style="text-align: center;">For the year 2016</p>
-					</div>
+	<div class="row" style="border-top: thick solid orange; border-bottom: thick solid orange;">
+		<div class="col-sm-8" style="border-right: thin solid orange">
+			<div class="row" style="border-bottom: thin solid orange;margin-top: 8px;">
+				<p style="font-weight: bold; font-size: 145%;">Data For the Year <span id="tb_yr_lbl"> </span></p> 
+				<div class="col-sm-4" >
+							<div class="panel" >
+								<div class="panel-heading " style="color: white; background-color: #37474F; text-align: center;">TB Tests Examined</div>
+								<div class="panel-body" style="height: 100px;">
+									<p style="text-align: center; padding-top: 20px; color: #8c9eff; 
+								font-weight: bold; font-size: 240%;" id="tb_count"></p>
+								</div>
+							</div>
+				</div>
+				<div class="col-sm-8" >
+							<div class="panel panel-default" >
+								
+								<div class="panel-body" style="height: 300px;" id="container_1">
+									<p style="text-align: center; padding-top: 20px; color: #8c9eff; 
+								font-weight: bold; font-size: 240%;" id="pi">150000</p>
+								</div>
+								
+							</div>
 				</div>
 			</div>
-			<div class="col-sm-6">
-				<div class="panel panel-default" style="margin-top: 3.5%;">
-					<div class="panel-heading " style="text-align: center;">Completed Orders</div>
-					<div class="panel-body" style="height: 80px;">
-						<p style="text-align: center;">150000</p>
-					</div>
-					<div class="panel-footer">
-						<p style="text-align: center;">For the year 2016</p>
-					</div>
+
+			<div class="row" style="margin-top: 8px;">
+				<p style="font-weight: bold; font-size: 145%;">Data For the Year 2017</p> 
+				<div class="col-sm-4" >
+							<div class="panel">
+								<div class="panel-heading " style="color: white; background-color: #37474F; text-align: center;">Malaria Examined</div>
+								<div class="panel-body" style="height: 100px;">
+									<p style="text-align: center; padding-top: 20px; color: #8c9eff; 
+								font-weight: bold; font-size: 240%;" id="pi">150000</p>
+								</div>
+							</div>
 				</div>
+				<div class="col-sm-8" >
+							<div class="panel panel-default" >
+								<div class="panel-body" style="height: 300px;" id="container_2">
+								</div>
+								
+							</div>
+				</div>
+				
 			</div>
+
+
+
+		</div>
+		<div class="col-sm-4" style="margin-top: 8px;">
+				<p style="font-weight: bold; font-size: 145%;">Data For the Year 2017</p> 
+				<div class="col-sm-12" >
+							<div class="panel" >
+								<div class="panel-heading " style="background-color: #37474F; color: white; font-weight: bold; text-align: center;">Samples Examined by Lab Departments</div>
+								<div class="panel-body" style="height: 255px;">
+									<p style="text-align: center;" id="pi">150000</p>
+								</div>
+							</div>
+				</div>
+				<div class="col-sm-12" style="margin-top: 50px;">
+							<div class="panel" >
+								<div class="panel-heading " style="background-color: #37474F; color: white; font-weight: bold; text-align: center;">Orders Examined by Facilities </div>
+								<div class="panel-body" style="height: 255px;">
+									<p style="text-align: center;" id="pi">150000</p>
+								</div>
+								
+							</div>
+				</div>
 		</div>
 
-		<div>
-			<div class="col-sm-6">
-				<div class="panel panel-default" style="margin-top: 3%;">
-					<div class="panel-heading " style="text-align: center;">Verified Orders</div>
-					<div class="panel-body" style="height: 80px;">
-						<p style="text-align: center;">150000</p>
+	</div>
+	
+	<div class="row" style="margin-top: 8px;">
+		<p style="font-weight: bold; font-size: 145%;">Data For the Year 2017</p> 
+		<div class="col-sm-12" >
+					<div class="panel" style="margin-top: 3.5%;">
+						<div class="panel-heading " style="background-color: #37474F; color: white; font-weight: bold; text-align: center;">Samples Examined by Facilities</div>
+						<div class="panel-body" style="height: 600px;">
+							<p style="text-align: center;" id="pi">150000</p>
+						</div>
 					</div>
-					<div class="panel-footer">
-						<p style="text-align: center;">For the year 2016</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6">
-			<div class="panel panel-default" style="margin-top: 3%;">
-				<div class="panel-heading " style="text-align: center;">Rejected Samples</div>
-				<div class="panel-body" style="height: 80px;">
-						<p style="text-align: center;">150000</p>
-				</div>
-				<div class="panel-footer">
-					<p style="text-align: center;">For the year 2016</p>
-				</div>
-			</div>
+
 		</div>
 	</div>
-	</div>
+
+	
 
 </div>
+
+<script type="text/javascript">
+	var counter = 0;
+	var years =  JSON.parse('<%= raw @years.to_json %>');
+	var yr = 0;
+		yr = years[counter];
+		var controller = 1;
+				
+			var url = "/get_general_counts?year=" + yr;
+			jQuery.ajax({
+					async: false,
+					url: url,
+					success: function(res)
+					{ 	var data = JSON.parse(res);
+						
+						for (var i in data)
+						{	
+							for (var ii in data[i])
+							{	var indicator = ii;
+								var value = data[i][ii];
+								if (controller == 1)
+								{	document.getElementById("p_header_1").innerHTML = indicator;
+									document.getElementById("v_header_1").innerHTML = value;
+									document.getElementById("yr_1").innerHTML = " " + yr;
+								}else
+								{
+									document.getElementById("p_header_2").innerHTML = indicator;
+									document.getElementById("v_header_2").innerHTML = value;
+									document.getElementById("yr_2").innerHTML = " " + yr;
+								}
+								controller ++;
+							}
+							controller = 1;
+						}
+
+					},
+					error: function(err)
+					{
+						alert(err.responseText);
+					}
+
+				});
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+			yr = years[counter];
+			var url = "/get_test_statuses?year=" + yr;
+			var dat = [];
+			
+			jQuery.ajax({
+					async: false,
+					url: url,
+					success: function(res){
+						var data = JSON.parse(res);
+
+						for (var i in data)
+						{	
+							for (var ii in data[i])
+							{
+								dat[counter] = [ii , data[i][ii] ];
+								counter = counter + 1;
+							}
+						}
+						counter = 0;
+						var tt = Highcharts.chart('container', {
+									    chart: {
+									        type: 'pie',
+									        options3d: {
+									            enabled: true,
+									            alpha: 45,
+									            beta: 0
+									        }
+									    },
+									    title: {
+									        text: 'Test Statuses in The Year ' + yr
+									    },
+									    height: 40,
+									    tooltip: {
+									        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+									    },
+									    plotOptions: {
+									        pie: {
+									            allowPointSelect: true,
+									            cursor: 'pointer',
+									            depth: 35,
+									            dataLabels: {
+									                enabled: true,
+									                format: '{point.name}'
+									            }
+									        }
+									    },
+									    series: [{
+									        type: 'pie',
+									        name: 'Test Statuses',
+									        data: dat
+									    }]
+									});
+					},
+					error: function(err)
+					{
+
+					}
+			});
+
+			yr = years[counter];
+			var url = "/get_tb_counts?year=" + yr;
+			jQuery.ajax({
+						async: false,
+						url:  url,
+						success: function(res){
+							var data = res;
+							document.getElementById("tb_count").innerHTML = data;
+							document.getElementById("tb_yr_lbl").innerHTML = yr;
+						},
+						error: function(err)
+						{
+
+						}
+			});
+
+</script>
+
+<script type="text/javascript">
+	var years =  JSON.parse('<%= raw @years.to_json %>');
+	var yr = 0;
+	
+
+	function topGeneralCounts()
+	{	var counter = 1;
+		
+		var controller = 1;
+
+		setInterval(function(){
+			yr = years[counter];
+			var url = "/get_general_counts?year=" + yr;
+			jQuery.ajax({
+					async: false,
+					url: url,
+					success: function(res)
+					{ 	var data = JSON.parse(res);
+						
+						for (var i in data)
+						{	
+							for (var ii in data[i])
+							{	var indicator = ii;
+								var value = data[i][ii];
+								if (controller == 1)
+								{	document.getElementById("p_header_1").innerHTML = indicator;
+									document.getElementById("v_header_1").innerHTML = value;
+									document.getElementById("yr_1").innerHTML = " " + yr;
+								}else
+								{
+									document.getElementById("p_header_2").innerHTML = indicator;
+									document.getElementById("v_header_2").innerHTML = value;
+									document.getElementById("yr_2").innerHTML = " " + yr;
+								}
+								controller ++;
+							}
+							controller = 1;
+						}
+
+					},
+					error: function(err)
+					{
+						alert(err.responseText);
+					}
+
+				});
+			
+			if (counter < years.length - 1){
+				counter = counter + 1;
+			}
+			else
+			{
+				counter = 0;
+			}
+
+		},10000);
+
+	}
+
+
+	function getTestStatuses()
+	{	
+		var counter = 0;		
+		var controller = 1;
+		var count = 1;
+
+		
+		setInterval(function(){	
+			yr = years[count];
+			
+			var url = "/get_test_statuses?year=" + yr;
+			var dat = [];
+			
+			jQuery.ajax({
+					async: false,
+					url: url,
+					success: function(res){
+						var data = JSON.parse(res);
+
+						for (var i in data)
+						{	
+							for (var ii in data[i])
+							{
+								dat[counter] = [ii , data[i][ii] ];
+								counter = counter + 1;
+							}
+						}
+						counter = 0;
+						var tt = Highcharts.chart('container', {
+									    chart: {
+									        type: 'pie',
+									        options3d: {
+									            enabled: true,
+									            alpha: 45,
+									            beta: 0
+									        }
+									    },
+									    title: {
+									        text: 'Test Statuses in The Year ' + yr
+									    },
+									    height: 40,
+									    tooltip: {
+									        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+									    },
+									    plotOptions: {
+									        pie: {
+									            allowPointSelect: true,
+									            cursor: 'pointer',
+									            depth: 35,
+									            dataLabels: {
+									                enabled: true,
+									                format: '{point.name}'
+									            }
+									        }
+									    },
+									    series: [{
+									        type: 'pie',
+									        name: 'Test Statuses',
+									        data: dat
+									    }]
+									});
+					},
+					error: function(err)
+					{
+
+					}
+			});
+		
+			if (count < years.length - 1){
+				count = count + 1;
+			}
+			else
+			{
+				count = 0;
+			}
+
+		},10000);
+
+	}
+
+
+	function getTbTests()
+	{	var count = 1;
+		
+		setInterval(function(){
+			yr = years[count];
+			var url = "/get_tb_counts?year=" + yr;
+			jQuery.ajax({
+						async: false,
+						url:  url,
+						success: function(res){
+							var data = res;
+							document.getElementById("tb_count").innerHTML = data;
+							document.getElementById("tb_yr_lbl").innerHTML = yr;
+						},
+						error: function(err)
+						{
+
+						}
+			});
+			
+			if (count < years.length - 1){
+				count = count + 1;
+			}
+			else
+			{
+				count = 0;
+			}
+
+		},10000);
+	}	
+
+	topGeneralCounts();
+	getTestStatuses();
+	getTbTests();
+
+		
+
+
+
+
+	Highcharts.chart('container_1', {
+	    chart: {
+	        type: 'bar'
+	    },
+	    title: {
+	        text: 'TB GenXpert against TB Microscopy '
+	    },
+	    xAxis: {
+	        categories: ['Microscopy'],
+	        title: {
+	            text: null
+	        },
+	        height: 20
+	    },
+	    yAxis: {
+	        min: 0,
+	        title: {
+	            text: 'Population (millions)',
+	            align: 'high'
+	        },
+	        labels: {
+	            overflow: 'justify'
+	        }
+	    },
+	    tooltip: {
+	        valueSuffix: ' millions'
+	    },
+	    plotOptions: {
+	        bar: {
+	            dataLabels: {
+	                enabled: true
+	            }
+	        }
+	    },
+	    legend: {
+	        layout: 'vertical',
+	        align: 'right',
+	        verticalAlign: 'top',
+	        x: -40,
+	        y: 80,
+	        floating: true,
+	        borderWidth: 1,
+	        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+	        shadow: true
+	    },
+	    credits: {
+	        enabled: false
+	    },
+	    series: [{
+	       
+	        data: [107]
+	    }]
+	});
+
+
+
+
+
+	Highcharts.chart('container_2', {
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'TB GenXpert against TB Microscopy '
+    },
+    xAxis: {
+        categories: ['Microscopy'],
+        title: {
+            text: null
+        },
+        height: 20
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Population (millions)',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' millions'
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    credits: {
+        enabled: false
+    },
+    series: [{
+       
+        data: [107]
+    }]
+});
+
+
+
+</script>
+
+
+<script type="text/javascript">
+
+    var zoomlevel = 1;
+    var currentSite = "";
+    var alerts = {};
+    var sitesErrors = {};
+
+
+
+    var loader = d3.xml("/images/Malawi.svg", function(xml) {
+        document.getElementById("main").appendChild(xml.documentElement);
+
+
+        <% @sites.each do |site|
+
+	        refPoints = [-9.331537, -17.158189, 32.674051, 35.969950];
+	        offsets = [10, 295, 10, 710];
+	        x = site['x'].to_f
+	        y = site['y'].to_f
+
+	        x = ((offsets[1] - offsets[0]) * ((x.abs - refPoints[2].abs) / (refPoints[3].abs - refPoints[2].abs)))
+
+	        y = ((offsets[3] - offsets[2]) * ((y.abs - refPoints[0].abs) / (refPoints[1].abs - refPoints[0].abs)))
+
+        %>
+
+	        var color = "red";
+
+	        <%
+	        if site['sync_status'] == true%>
+	             color = 'green';
+	        <% end %>
+	       
+	     
+	        d3.select("#malawi").append("circle")
+	                .style("stroke", "white")
+	                .style("stroke-width", "1px")
+	                .style("fill", color)
+	                .style("margin", "auto")
+	                .attr("r", 6)
+	                .attr("class", "circle")
+	                .attr("cx", "<%= x %>")
+	                .attr("cy", "<%= y %>")
+	                .attr("color", color)
+	                .attr("id", "<%= site['site_code'].downcase %>")
+	                .attr("tag", "<%= site['name'] %>")
+	                .on("mousedown", function(){
+	                       // window.parent.location = "/report/site_summary?site_name=" + this.getAttribute("tag")
+	                })
+	                .on("mouseover", function(){
+
+	                    d3.select(".circle").attr("r", 7);
+	                    d3.select("#" + this.id).attr("r", 12).style("z-index", "100");
+
+	                    return tooltip.style("visibility", "visible");
+	                })
+	                .on("mousemove", function(){
+	                    return tooltip.style("top",
+	                                    (d3.event.pageY-10)+"px")
+	                            .style("left", (d3.event.pageX+20)+"px")
+	                            .text(getSiteInfo(this.id));
+	                })
+	                .on("mouseout", function(){
+	                    d3.select("#" + this.id).attr("r", 7).style("z-index", "10")
+	                            .style("fill", this.getAttribute("color"));
+	                    return tooltip.style("visibility", "hidden");
+	                });
+
+        <% end %>
+       
+    });
+
+    var tooltip = d3.select("body")
+            .append("div")
+            .style("position", "absolute")
+            .style("z-index", "10")
+            .style("visibility", "hidden")
+            .style("background", "#f6f3d7")
+            .style("padding", "5px")
+            .style("border", "1px solid #000")
+            .style("border-radius", "5px")
+            .text("Tooltip");
+
+    function getSiteInfo(id){
+        var result = id;
+
+        if(document.getElementById(id)){
+            result = document.getElementById(id).getAttribute("tag");
+            if (sitesErrors[result]){
+                result = result + ",   " + sitesErrors[result];
+            }else{
+                result = result;
+            }
+        }
+
+        return result;
+    }
+
+    function resizeMap(){
+        zoomlevel = 1;
+
+        d3.select('#region').attr('transform','scale(' + zoomlevel + ')')
+                .style("background", "white")
+
+    }
+
+
+
+</script>

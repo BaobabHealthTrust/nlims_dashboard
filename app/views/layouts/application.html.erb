@@ -4,12 +4,13 @@
   <title>NlimsDashboard</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+   <%= javascript_include_tag "highcharts" %>
   <%= csrf_meta_tags %>
 </head>
-<body style="background-color: lightgrey;">
+<body style="background-color: #eeeeee">
 
 	
-	<div style="background-color: #37474F;">
+	<div style="background-color: #37474F;height: 130px;">
 		
 		
 		<h2 style="margin-top: 0px; padding-left:  8.5%; padding-top: 2%; color: white;">
@@ -20,14 +21,22 @@
 			</span>
 		</h2>
 		
+		<div class="col-sm-offset-1 col-sm-10" style="padding-top: 0.5%; padding-left: 0.5%;padding-bottom: 0.5%">
+			<span>
+				<input id="f_btn" type="button" value="Home" class="btn" style="background-color: #37474F; color: orange" onclick="window.location='/home'">
+
+			</span>
+			<span>
+				<input id="f_btn" type="button" value="MoH Diagnostic Report" 
+					style="background-color: #37474F; color: orange" class="btn" onclick="window.location='/moh_report'">
+
+			</span>
+
+			
+		</div>
 
 	</div>
-	<div class="col-sm-offset-1 col-sm-10" style=" background-color: white; padding-top: 0.5%; padding-left: 0.5%;padding-bottom: 0.5%">
-		<span>
-			<input type="button" value="MoH Report" class="btn btn-primary" onclick="window.location='/moh_report'">
-
-		</span>	
-	</div>
+	
 
 	<%= yield %>
 </body>

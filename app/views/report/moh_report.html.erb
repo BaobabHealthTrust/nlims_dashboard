@@ -12,7 +12,7 @@
 
 #table tr:nth-child(even){background-color: #f2f2f2;}
 
-#table tr:hover {background-color: #ddd;}
+#table tbody tr:hover {background-color: #ddd;}
 
 #table th {
     padding-top: 12px;
@@ -23,12 +23,11 @@
 }
 </style>
 
-
-<div style="margin-left: 8.3%; margin-top: 95px; width: 83.5%;">
-
+<div style="margin-left: 8.3%; margin-top: 40px; width: 83.5%;">
+	
 	<div class="col-sm-2">
-		<div class="panel panel-default">
-			<div class="panel-heading">
+		<div class="panel">
+			<div class="panel-heading" style="background-color: #37474F; color: white; font-weight: bold;">
 				Searching Cretaria
 			</div>
 			<div class="panel-body">
@@ -92,9 +91,9 @@
 
 	<div class="col-sm-10">
 		
-		<div style="margin-top: 3px; height: 650px; overflow: auto">
+		<div style="margin-top: 1px; height: 650px; overflow: auto">
 			<table class="table" id="table">
-				<thead style="background-color: #37474F; color: white;">
+				<thead style="background-color: #37474F; color: white; font-weight: bold;">
 					<tr id="t_header">
 						<th>Indicator</th>
 			
@@ -360,8 +359,9 @@
 						rows_header_counter = 0;
 					}
 					csv = [];
+					var c = 0
 					for (var i in data){
-
+						c = c + 1;
 							var row = rows.insertRow(row_counter);
 							var cel = row.insertCell(0);						
 							cel.innerHTML = i.toUpperCase().bold();
@@ -391,7 +391,7 @@
 							com_counter = com_counter + 1;
 						}	
 						rows_header_counter  = rows_header_counter  + 1;
-													
+						console.log(c);							
 					}
 
 					document.getElementById("foot").style.display = "block";
@@ -445,5 +445,8 @@
           } else 
           {window.open('data:text/csv;charset=UTF-8,' + encodeURIComponent(final_csv));
           }
- }
+ 	}
+
+
+
 </script>
